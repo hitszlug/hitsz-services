@@ -1,0 +1,32 @@
+site_name: HITSZ SERVICES
+repo_name: hitszlug/hitsz-services
+#site_url: https://wiki.hitsz.org/
+repo_url: https://github.com/hitszlug/hitsz-services
+edit_uri: edit/main/docs/
+copyright: Under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>.
+
+theme:
+  name: material
+
+  features:
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+  palette:
+    - media: "(prefers-color-scheme: light)" 
+      scheme: default
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)" 
+      scheme: slate
+      toggle:
+        icon: material/lightbulb
+        name: Switch to light mode
+
+nav:
+  - 'index.md'
+  - 'network.md'
+  - 'software.md'
+  - 'website.md'
+
