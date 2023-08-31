@@ -1,7 +1,7 @@
 site_name: HITSZ SERVICES
 repo_name: hitszlug/hitsz-services
-#site_url: https://wiki.hitsz.org/
-repo_url: https://github.com/hitszlug/hitsz-services
+site_url: https://services.osa.moe/
+repo_url: https://github.com/hitszosa/hitsz-services
 edit_uri: edit/main/docs/
 copyright: Under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>.
 
