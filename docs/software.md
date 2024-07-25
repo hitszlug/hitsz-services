@@ -6,4 +6,4 @@
 
 ## 开源软件镜像站
 
-[10.249.12.85](http://10.249.12.85)，位于内网的开源软件镜像站，包含多个开源软件和开源操作系统的软件源。
+[mirrors.osa.moe](https://mirrors.osa.moe)，由 [HITSZ OSA](https://github.com/hitszosa) 维护的位于内网的开源软件镜像站，包含多个开源软件和开源操作系统的软件源。

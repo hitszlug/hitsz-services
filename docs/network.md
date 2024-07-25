@@ -29,13 +29,9 @@ title: 网络
 
 域名解析服务器。地址为 10.248.98.30，提供域名解析服务。
 
-需要注意的是，这个 DNS 的效果很糟糕。当你使用该 DNS 时会有 bilibili 视频加载缓慢或无法加载、部分社交软件媒体资源加载缓慢等问题。这是校园网 DNS 自身的问题。该 DNS 在进行域名解析时使用了教育网，而各大 CDN 都有教育网节点，当你使用该 DNS 时，访问上述媒体资源时将会解析到这些教育网节点。这些节点至少在广东电信、移动、联通环境下访问是不太通畅的。
+需要注意的是，请不要随意更改 DNS 为其他公共 DNS 服务。这是由于教育网的互联问题，使用 IPv6 访问深圳、广东的 CDN 路由不佳，具体表现为绕路或丢包。网络中心通过在上述 DNS 服务中屏蔽部分地址，对部分有此问题的 CDN 进行了特殊处理，当你更换为其他 DNS 时可能需要你自行解决此问题。
 
-解决如上问题的方法只有一个，就是不使用校园网提供的 DNS 服务。可以考虑使用如下几个公共域名解析服务：
-
-1. 114.114.114.114
-2. 119.29.29.29
-3. 223.5.5.5
+> TODO: 如何解决软件内置 DoH 解析出坏地址
 
 ## SSLVPN
 
@@ -79,4 +75,13 @@ IPv6 无准出限制，在准出认证上有如下特性：
 
 EasyConnect 的依赖很难处理，如果你的 Linux 设备需要使用，可以尝试使用 [Hagb/docker-easyconnect](https://github.com/Hagb/docker-easyconnect)。
 
+[Mythologyli/zju-connect](https://github.com/Mythologyli/zju-connect) 是深信服 SSLVPN 的开源客户端，该软件是为 ZJU 设计，但我们只需要在配置中修改 `server_address` 与 `zju_dns_server` 便可使其适用于 HITSZ。最小的能工作的配置文件如下所示：
+
+```toml
+# 将下面的 username 和 password 配置换成自己的学号和密码
+username = "xxxxxxxxxxxxx"
+password = "yyyyyyyyyyyyyyy"
+server_address = "vpn.hitsz.edu.cn"
+zju_dns_server = "10.248.98.30"
+```
 
